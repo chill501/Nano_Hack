@@ -25,11 +25,11 @@ https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
 
 http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
-
+## Fast5 Document Summary 
 The Segmentation component of a 2D basecalling workflow appears in the .fast5 file in the Analyses section under the name Hairpin_Split_000.
 
 ## TASKS
 
 - [ ] read the fast5 format document sent by Sam (Claire and Hayley)
 - [ ] work out Biopython and how to link to NCBI Blast (Alex)
-- [ ] get fast5 fieles in right formate
+- [ ] get fast5 fiels in right format
