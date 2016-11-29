@@ -63,6 +63,10 @@ grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *prints out line matched and 1s
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
+Library to use:
+
+	all_ref.fasta
+
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present 
 
 ### BWA
@@ -93,7 +97,11 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
 ### Tablet
 
-Compair .bai file with all_ref.fasta
+Files to use:
+
+	all_reads.fasta
+	
+	all_ref_join.fasta
 
 
 - [ ] add GFP into all_ref.fasta
