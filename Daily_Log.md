@@ -29,6 +29,13 @@ http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
 - [ ] Use poretools to extract fasta files from fsat5
 
+which poretools *shows where poretools instaleled*
+
+ls -lct | head *view files by time*
+
+
+
+
 
 
 ## TASKS
