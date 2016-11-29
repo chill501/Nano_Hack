@@ -35,6 +35,9 @@ ls -lct | head *view files by time*
 
 grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st line after*
 
+#Fast5 --> Fasta 
+
+poretools fasta BC04 > BC04.fasta
 
 
 
