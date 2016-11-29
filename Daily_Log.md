@@ -31,13 +31,13 @@ ls -lct | head *view files by time*
 
 grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st line after*
 
-#Fast5 --> Fasta 
+# Fast5 --> Fasta 
 
 poretools fasta BC04 > BC04.fasta
 
 - [x] Each fasta file now created (Claire and Hayley)
 
-#Fasta --> Extracting 2D reads
+# Fasta --> Extracting 2D reads
 
 See program **code.py**
 
@@ -47,14 +47,18 @@ cat *.fasta > all.fasta
 
 # Blast
 Recently changed - therefore Biopython no longer able to link in to Blast
-So we will take a subset of plasmids and compare against them
+So we will take a subset of plasmids and compare against them 
 
-##Creating local database of plasmids 
+# CANU
+
+De novo assembly using all reads
+
+
 
 ### TASKS
 
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
-- [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
+- [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] COmbine fast5 and fasta programs into one program
 - [ ] Live demo for local library for BLAST
 - [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
