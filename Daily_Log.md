@@ -72,6 +72,8 @@ For long read alignment you need another software tool. Use bwa like this:
     samtools view -bS reads_aln.sam > reads_aln.bam
 
     samtools sort reads_aln.bam -o reads_aln.sorted.bam
+    
+    samroolx index reads_aln.sorted.bam
 
   You can look at these alignments with a software package called **Tablet.
 
