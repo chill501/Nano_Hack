@@ -41,7 +41,7 @@ ls -lct | head *view files by time*
 
 See program **code.py**
 
-#Combine all reads into single file
+### Combine all reads into single file
 
     cat *.fasta > all.fasta
 
