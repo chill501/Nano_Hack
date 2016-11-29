@@ -25,6 +25,7 @@ Use BLAST
 
 PLASMID SEARCH TOOLS:
 https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
+
 http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
 
