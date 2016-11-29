@@ -25,8 +25,6 @@ https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
 
 http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
- 
-###Notes 
 which poretools *shows where poretools instaleled*
 
 ls -lct | head *view files by time*
