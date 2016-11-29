@@ -27,7 +27,7 @@ http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
 ### Fast5 Document Summary 
 
-- [ ] DOWNLOAD HDF5
+- [ ] Use poretools to extract fasta files from fsat5
 
 
 
@@ -35,4 +35,4 @@ http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
 - [ ] read the fast5 format document sent by Sam (Claire and Hayley)
 - [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
-- [ ] get fast5 fiels in right format
+
