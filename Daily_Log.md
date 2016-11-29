@@ -51,13 +51,9 @@ So we will take a subset of plasmids and compare against them
 
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present 
 
-### CANU
-
-De novo assembly using all reads **did not work
-
 ### BWA
 
-For long read alignment you need another software tool. Use bwa like this:
+For long read **alignment** you need another software tool. Use bwa like this:
 
     git clone https://github.com/lh3/bwa.git
 
@@ -73,16 +69,17 @@ For long read alignment you need another software tool. Use bwa like this:
 
     samtools sort reads_aln.bam -o reads_aln.sorted.bam
     
-    samroolx index reads_aln.sorted.bam
+    samrools index reads_aln.sorted.bam
 
   You can look at these alignments with a software package called **Tablet.
 
-  
+ 
   
 ## 29th
 
 ### Tablet
 
+Compair .bai file with all_ref.fasta
 
 
 - [ ] add GFP into all_ref.fasta
