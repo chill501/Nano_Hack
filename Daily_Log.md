@@ -53,6 +53,8 @@ So we will take a subset of plasmids and compare against them
 
 De novo assembly using all reads
 
+canu -p _________- -d ___________ genomesize=20000 \ -s ______
+
 
 
 ### TASKS
