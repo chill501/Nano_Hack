@@ -7,12 +7,7 @@ Search the plasmid database for hits - hit that keeps coming up and up.
 
 Use longer reads - so that the seq dont hit a load of stuff 
 
-
-Blast against just plasmids:
-
-
-
-AWS - Cloud Computing
+Blast against just plasmids
 
 ncbiwww module in Pyhton
 
