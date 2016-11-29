@@ -79,9 +79,9 @@ For long read alignment you need another software tool. Use bwa like this:
 
   
   
-# 29th
+## 29th
 
-## Tablet
+# Tablet
 
 
 
