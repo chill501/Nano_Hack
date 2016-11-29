@@ -31,13 +31,13 @@ ls -lct | head *view files by time*
 
     grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st line after*
 
-# Fast5 --> Fasta 
+### Fast5 --> Fasta 
 
     poretools fasta BC04 > BC04.fasta
 
 - [x] Each fasta file now created (Claire and Hayley)
 
-# Fasta --> Extracting 2D reads
+### Fasta --> Extracting 2D reads
 
 See program **code.py**
 
@@ -45,17 +45,17 @@ See program **code.py**
 
     cat *.fasta > all.fasta
 
-# Blast
+### Blast
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present 
 
-# CANU
+### CANU
 
 De novo assembly using all reads - **did not work
 
-# BWA
+### BWA
 
 For long read alignment you need another software tool. Use bwa like this:
 
@@ -78,6 +78,11 @@ For long read alignment you need another software tool. Use bwa like this:
   
   
 # 29th
+
+## Tablet
+
+
+
 - [ ] add GFP into all_ref.fasta
 - [ ] Ask Sam about Tablet
 
