@@ -49,6 +49,8 @@ See program **code.py**
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
+-[ ] What info can we extract from Blast - eg. shows us what plasmids are present 
+
 # CANU
 
 De novo assembly using all reads - **did not work
@@ -73,10 +75,15 @@ For long read alignment you need another software tool. Use bwa like this:
 
   You can look at these alignments with a software package called **Tablet.
 
-  If you can't install it due to permission rights, Eoin should be able to load it onto your machine
+  
+  
+# 29th
+- [ ] add GFP into all_ref.fasta
+- [ ] Ask Sam about Tablet
 
-### TASKS
 
+
+### General Tasks
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] Combine fast5 and fasta programs into one program
