@@ -57,23 +57,23 @@ De novo assembly using all reads - **did not work
 
 For long read alignment you need another software tool. Use bwa like this:
 
-git clone https://github.com/lh3/bwa.git
+    git clone https://github.com/lh3/bwa.git
 
-cd bwa
+    cd bwa
 
-make
+    make
 
-bwa index ref.fasta
+    bwa index ref.fasta
 
-bwa mem -x ont2d ref.fasta reads.fasta > reads_aln.sam
+    bwa mem -x ont2d ref.fasta reads.fasta > reads_aln.sam
 
-samtools view -bS reads_aln.sam > reads_aln.bam
+    samtools view -bS reads_aln.sam > reads_aln.bam
 
-samtools sort reads_aln.bam reads_aln.sorted.bam
+    samtools sort reads_aln.bam reads_aln.sorted.bam
 
-    You can look at these alignments with a software package called **Tablet.
+  You can look at these alignments with a software package called **Tablet.
 
-    If you can't install it due to permission rights, Eoin should be able to load it onto your machine
+  If you can't install it due to permission rights, Eoin should be able to load it onto your machine
 
 ### TASKS
 
