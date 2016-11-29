@@ -53,7 +53,7 @@ So we will take a subset of plasmids and compare against them
 
 ### CANU
 
-De novo assembly using all reads - **did not work
+De novo assembly using all reads **did not work
 
 ### BWA
 
