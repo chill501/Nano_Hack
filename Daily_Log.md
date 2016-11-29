@@ -37,17 +37,19 @@ grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st
 
 poretools fasta BC04 > BC04.fasta
 
-- [x] Each fasta file now created
+- [x] Each fasta file now created (Claire and Hayley)
 
 #Fasta --> Extracting 2D reads
 
 See program **code.py**
 
-- [ ] Check with Sam if we use 2D reads
+- [ ] Check with Sam if we use 2D reads (Hayley and Claire)
 
 ### Blast
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them
+
+- [ ] find alternative to Blast 
 
 ## TASKS
 
