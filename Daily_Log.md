@@ -22,6 +22,8 @@ Use fast5 files
 Poretool to process fast5 files
 
 Use BLAST
+BLASTING AGAINST PLASMIDS
+Type plasmids (taxid:36549) in organisms 
 
 PLASMID SEARCH TOOLS:
 https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
@@ -30,7 +32,8 @@ http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
 
 
-BLASTING AGAINST PLASMIDS
-Type plasmids (taxid:36549) in organisms 
 
+
+
+The Segmentation component of a 2D basecalling workflow appears in the .fast5 file in the Analyses section under the name Hairpin_Split_000.
 
