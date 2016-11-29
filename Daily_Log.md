@@ -23,7 +23,7 @@ Poretool to process fast5 files
 
 Use BLAST
 BLASTING AGAINST PLASMIDS
-Type plasmids (taxid:36549) in organisms 
+Type **plasmids (taxid:36549)** in organisms 
 
 PLASMID SEARCH TOOLS:
 https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
