@@ -33,6 +33,8 @@ which poretools *shows where poretools instaleled*
 
 ls -lct | head *view files by time*
 
+grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st line after*
+
 
 
 
