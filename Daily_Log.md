@@ -31,5 +31,5 @@ The Segmentation component of a 2D basecalling workflow appears in the .fast5 fi
 ## TASKS
 
 - [ ] read the fast5 format document sent by Sam (Claire and Hayley)
-- [ ] work out Biopython and how to link to NCBI Blast (Alex)
+- [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] get fast5 fiels in right format
