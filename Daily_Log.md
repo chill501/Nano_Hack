@@ -45,6 +45,9 @@ See program **code.py**
 
 - [ ] Check with Sam if we use 2D reads
 
+### Blast
+Recently changed - therefore Biopython no longer able to link in to Blast
+So we will take a subset of plasmids and compare against them
 
 ## TASKS
 
