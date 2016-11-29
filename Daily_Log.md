@@ -25,10 +25,8 @@ https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
 
 http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
-### Fast5 Document Summary 
-
-- [ ] Use poretools to extract fasta files from fsat5
-
+ 
+###Old stuff 
 which poretools *shows where poretools instaleled*
 
 ls -lct | head *view files by time*
@@ -39,12 +37,17 @@ grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st
 
 poretools fasta BC04 > BC04.fasta
 
+- [X]Each fasta file now created
 
+#Fasta --> Extracting 2D reads
 
+See program **code.py*
+
+- [ ] Check with Sam if we use 2D reads
 
 
 ## TASKS
 
-- [ ] read the fast5 format document sent by Sam (Claire and Hayley)
+- [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 
