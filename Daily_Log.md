@@ -41,8 +41,6 @@ poretools fasta BC04 > BC04.fasta
 
 See program **code.py**
 
-- [ ] Check with Sam if we use 2D reads (Hayley and Claire)
-
 #Combine all reads into single file
 
 cat *.fasta > all.fasta
