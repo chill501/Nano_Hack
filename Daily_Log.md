@@ -59,3 +59,4 @@ Going to locally install databases
 - [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] COmbine fast5 and fasta programs into one program
 - [ ] Live demo for local library for BLAST
+- [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
