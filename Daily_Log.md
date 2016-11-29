@@ -37,7 +37,7 @@ grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st
 
 poretools fasta BC04 > BC04.fasta
 
-- [X]Each fasta file now created
+- [x] Each fasta file now created
 
 #Fasta --> Extracting 2D reads
 
