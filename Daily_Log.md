@@ -41,7 +41,7 @@ poretools fasta BC04 > BC04.fasta
 
 #Fasta --> Extracting 2D reads
 
-See program **code.py*
+See program **code.py**
 
 - [ ] Check with Sam if we use 2D reads
 
