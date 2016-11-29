@@ -1,4 +1,4 @@
-#usr/bin
+#!/usr/bin/env python
 
 import sys
 inFile = sys.argv[1]
