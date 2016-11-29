@@ -51,16 +51,28 @@ So we will take a subset of plasmids and compare against them
 
 # CANU
 
-De novo assembly using all reads
+De novo assembly using all reads - **did not work
 
-canu -p _________- -d ___________ genomesize=20000 \ -s ______
+# BWA
 
+For long read alignment you need another software tool. Use bwa like this:
 
+git clone https://github.com/lh3/bwa.git
+cd bwa
+make
+bwa index ref.fasta
+bwa mem -x ont2d ref.fasta reads.fasta > reads_aln.sam
+samtools view -bS reads_aln.sam > reads_aln.bam
+samtools sort reads_aln.bam reads_aln.sorted.bam
+
+You can look at these alignments with a software package called Tablet.
+
+If you can't install it due to permission rights, Eoin should be able to load it onto your machine
 
 ### TASKS
 
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
-- [ ] COmbine fast5 and fasta programs into one program
+- [ ] Combine fast5 and fasta programs into one program
 - [ ] Live demo for local library for BLAST
 - [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
