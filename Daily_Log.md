@@ -43,7 +43,7 @@ See program **code.py**
 
 - [ ] Check with Sam if we use 2D reads (Hayley and Claire)
 
-Combine all reads into single file
+#Combine all reads into single file
 
 cat *.fasta > all.fasta
 
@@ -51,9 +51,7 @@ cat *.fasta > all.fasta
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them
 
-- [x] find alternative to Blast 
-
-Going to locally install databases 
+##Creating local database of plasmids 
 
 ### TASKS
 
