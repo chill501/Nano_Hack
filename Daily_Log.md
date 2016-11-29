@@ -49,7 +49,9 @@ See program **code.py**
 Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them
 
-- [ ] find alternative to Blast 
+- [x] find alternative to Blast 
+
+Going to locally install databases 
 
 ### TASKS
 
