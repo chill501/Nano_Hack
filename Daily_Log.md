@@ -71,9 +71,9 @@ samtools view -bS reads_aln.sam > reads_aln.bam
 
 samtools sort reads_aln.bam reads_aln.sorted.bam
 
-You can look at these alignments with a software package called Tablet.
+    You can look at these alignments with a software package called **Tablet.
 
-If you can't install it due to permission rights, Eoin should be able to load it onto your machine
+    If you can't install it due to permission rights, Eoin should be able to load it onto your machine
 
 ### TASKS
 
