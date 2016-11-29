@@ -51,7 +51,7 @@ So we will take a subset of plasmids and compare against them
 
 - [ ] find alternative to Blast 
 
-## TASKS
+### TASKS
 
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
