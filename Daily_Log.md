@@ -1,6 +1,8 @@
 # Nano_Hack
 
 ## 27th 
+
+###Ideas
 Combine two fasta files
 
 Search the plasmid database for hits - hit that keeps coming up and up.
@@ -25,11 +27,11 @@ https://plasmid.med.harvard.edu/PLASMID/PrepareBlast.do
 
 http://blog.addgene.org/tips-for-using-blast-to-verify-plasmids
 
-which poretools *shows where poretools instaleled*
+which poretools *shows where poretools installed*
 
 ls -lct | head *view files by time*
 
-    grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *print out line matched and 1st line after*
+grep -A 1 Barcoding_2d ___.fasta > 2d____.fasta  *prints out line matched and 1st line after*
 
 ### Fast5 --> Fasta 
 
