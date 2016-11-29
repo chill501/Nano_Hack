@@ -63,13 +63,13 @@ For long read alignment you need another software tool. Use bwa like this:
 
     make
 
-    bwa index ref.fasta
+    bwa index all_ref.fasta
 
-    bwa mem -x ont2d ref.fasta reads.fasta > reads_aln.sam
+    bwa mem -x ont2d all_ref.fasta all_reads.fasta > reads_aln.sam
 
     samtools view -bS reads_aln.sam > reads_aln.bam
 
-    samtools sort reads_aln.bam reads_aln.sorted.bam
+    samtools sort reads_aln.bam -o reads_aln.sorted.bam
 
   You can look at these alignments with a software package called **Tablet.
 
