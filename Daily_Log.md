@@ -50,4 +50,4 @@ See program **code.py**
 
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [ ] work out Biopython and how to link to NCBI Blast (Alex and Emma)
-
+- [ ] COmbine fast5 and fasta programs into one program
