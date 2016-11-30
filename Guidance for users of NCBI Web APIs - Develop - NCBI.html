@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/jig.min.css">
+    
+    <title>Guidance for users of NCBI Web APIs - Develop - NCBI</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/action-pgs.css">
+    
+
+    <meta name="ncbi_app" content="guide4beta">
+
+    
+    <meta name="ncbi_page_name" content="develop_libraries_https_guidance">
+
+
+<!-- page_type is one of: home, category, action, content. -->
+
+    <meta name="ncbi_page_type" content="content">
+
+
+<script type="text/javascript">
+    var ncbi_startTime = new Date();
+</script>
+
+
+    <link media="only screen and (max-width: 905px)" rel="stylesheet" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/medium_screen.css">
+
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/standard_base.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/new_grid.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/app.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/header.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/homepage.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/footer.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/check_youtube.css">
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/feedback.css">
+
+    <!-- for clear button on search input -->
+    <link rel="stylesheet" type="text/css" href="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/clear.css">
+    <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/clear.js"></script>
+
+    <!-- hp-971 - img for links to ncbi from social media sites -->
+    <link rel="image_src" href="https://www.ncbi.nlm.nih.gov/corehtml/logo100.gif">
+
+    <!-- for popular resources list -->
+        <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/jig.min.js"></script>
+
+    <style>
+        .top-nav {
+            display:block;
+        }
+        .top-nav li a { color:#000;}
+
+        .search_bar  {
+            clear:both;
+            margin-top:1em;
+        }
+
+        html .ui-ncbimenu > li > a {color:#000;}
+        .top-nav li a:hover {color:#000;background:none;}
+        .top-nav li.popular-res-menu.selected > a {color:#000;background:none;}
+        .top-nav li a.expandDown {}
+        .top-nav .ui-ncbimenu li a.expandDown {background:none;padding-right:0;}
+        .ui-ncbibasicmenu li:last-child, .ui-ncbibasicmenu li:last-child a {
+            border-radius: 0;
+        }
+        .nopadding {padding:0;}
+    </style>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('.arrow-down').click(function(){jQuery('.popular-res-menu .expandDown').trigger('click');})
+            jQuery('.top-nav ul.jig-ncbimenu li:not(.popular-res-menu)').addClass('no-submenu');
+        });
+    </script>
+    <!-- end for popular resources list -->
+
+    <!-- for HP-886 -->
+    <script>
+    (function($){
+        $(function(){
+            var $dbList = $('.search_bar form select:first-child'),
+                $btn = $('.search_bar form button[name="Search"]'),
+                $input = $('#search');
+
+            console.info($btn);
+
+            $btn.on('click', function(evt){
+                var db = $dbList.val(), searchTerm = $input.val();
+                if ( db != '' && searchTerm != '') {
+                    window.location.href = 'https://www.ncbi.nlm.nih.gov/'+ db + '/?term=' + searchTerm
+                } else if (db !== '' && searchTerm === '') {
+                    window.location.href = 'https://www.ncbi.nlm.nih.gov/'+ db + '/';
+                }
+                else {
+                    $input.focus();
+                }
+                return false;
+            });
+
+        });
+    })(jQuery);
+    </script>
+    <!-- end for HP-886 -->
+
+    <style type="text/css">
+#maincontent ul { list-style-type: disc; }
+    </style>
+
+<style type="text/css" media="print">.print-log { position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden; }.print-log li { list-style-image: url('https://www.ncbi.nlm.nih.gov/stat?jsevent=print&ncbi_app=guide4beta&ncbi_pdid=GuidanceforusersofNCBIWebAPIs-Develop-NCBI&ncbi_phid=F4FC2BE48177B5F91480508367273SID'); }</style><style type="text/css">.print-log { position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden; }</style></head>
+<body id="ui-ncbiexternallink-4">
+<div class="grid">
+
+    
+
+    <header id="page_header" role="banner" data-section="header">
+
+        <ul class="skip_nav">
+            <li><a accesskey="1" title="NCBI Homepage" href="https://www.ncbi.nlm.nih.gov/" id="page_header_1">NCBI Home</a></li>
+            <li><a accesskey="2" title="MyNCBI" href="https://www.ncbi.nlm.nih.gov/myncbi" id="page_header_2">Sign in to NCBI</a></li>
+            <li><a accesskey="3" title="Skip to main content" href="https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml#maincontent" id="page_header_3">Skip to Main Content</a></li>
+            <li><a accesskey="4" title="Skip to navigation" href="https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml#navcontent" id="page_header_4">Skip to Navigation</a></li>
+            <li><a accesskey="0" title="About NCBI Accesskeys" href="https://www.ncbi.nlm.nih.gov/guide/browsers/#accesskeys" id="page_header_5">About NCBI Accesskeys</a></li>
+        </ul>
+
+        <nav class="blue_nav_bar">
+            <div class="nih">
+                <a href="https://www.nih.gov/" class="left norm_height" id="page_header_6">
+                    <img src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/nih_logo.svg" alt="NIH logo" class="left"></a>
+                <a href="https://www.nlm.nih.gov/" class="left header_link" id="page_header_7">U.S. National Library of Medicine</a>
+            </div>
+
+            <div class="left">
+                <img src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/arrow.svg" class="left norm_height" alt="">
+            </div>
+
+            <div class="ncbi">
+                <a href="https://www.ncbi.nlm.nih.gov/" class="header_link" id="page_header_8">
+                    <span class="ncbi_name">NCBI</span>
+                    <span class="med_hidden">National Center for Biotechnology Information</span></a>
+
+                    <div class="right sign-in">
+                        <ul class="myncbi2">
+                            <li id="myncbiusername">
+                                <span id="mnu">
+                                  <a href="https://www.ncbi.nlm.nih.gov/account/settings/" title="Edit account settings" id="mnu_0"></a>
+                                </span>
+                            </li>
+                            <li id="myncbi" style="display:none"><a accesskey="2" href="https://www.ncbi.nlm.nih.gov/myncbi/" id="myncbi_0">My NCBI</a></li>
+                            <li id="myncbi_sign_in"><a href="https://www.ncbi.nlm.nih.gov/account/?back_url=https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml" id="myncbi_sign_in_0">Sign in to NCBI</a></li>
+                            <li id="myncbi_register" style="display:none"><a href="https://www.ncbi.nlm.nih.gov/account/register/?back_url=https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml" id="myncbi_register_0">Register</a></li>
+                            <li id="myncbi_sign_out" style="display:none"><a href="https://www.ncbi.nlm.nih.gov/account/signout/?back_url=https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml" id="myncbi_sign_out_0">Sign Out</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+
+<!-- gray header - nav & search -->
+        <div class="bg-gray header-div">
+        <nav class="top-nav" id="navcontent" role="navigation">
+            <ul class="inline_list black_text category_bar jig-ncbimenu ui-ncbimenu ui-ncbibasicmenu orientation_hort" id="ui-ncbimenu-3" role="menubar">
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/" class="uppercase" role="menuitem" id="ui-ncbimenu-3_1">ncbi home</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/literature.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_2">literature</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/health.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_3">health</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/genomes.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_4">genomes</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/genes.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_5">genes</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/proteins.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_6">proteins</a></li>
+                <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/home/chemicals.shtml" class="uppercase" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_7">chemicals</a></li>
+
+                <li class="popular-res-menu" role="presentation">
+                    <a href="https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml#" class="uppercase expandDown" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_8">popular resources ▼</a>
+                    <ul aria-hidden="true" class="ui-ncbibasicmenu" role="menu" style="display: none;">
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/pubmed/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_9">PubMed</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/books/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_10">Bookshelf</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/pmc/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_11">PubMed Central</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/pubmedhealth/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_12">PubMed Health</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://blast.ncbi.nlm.nih.gov/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_13">BLAST</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/nucleotide/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_14">Nucleotide</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/genome/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_15">Genome</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/snp/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_16">SNP</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/gene" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_17">Gene</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://www.ncbi.nlm.nih.gov/protein/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_18">Protein</a></li>
+                        <li role="presentation" class="no-submenu"><a href="https://pubchem.ncbi.nlm.nih.gov/" aria-haspopup="true" tabindex="-1" role="menuitem" id="ui-ncbimenu-3_19">PubChem</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search_bar">
+            <form action="https://www.ncbi.nlm.nih.gov/search" method="get" role="search">
+                <select id="database">
+                    <!-- <optgroup label="Recent"><option value="gquery" selected="selected" class="last">All Databases</option></optgroup> -->
+                    <optgroup><option value="gquery">All Databases</option><option value="assembly">Assembly</option><option value="bioproject">BioProject</option><option value="biosample">BioSample</option><option value="biosystems">BioSystems</option><option value="books">Books</option><option value="clinvar">ClinVar</option><option value="clone">Clone</option><option value="cdd">Conserved Domains</option><option value="gap">dbGaP</option><option value="dbvar">dbVar</option><option value="nucest">EST</option><option value="gene">Gene</option><option value="genome">Genome</option><option value="gds">GEO DataSets</option><option value="geoprofiles">GEO Profiles</option><option value="nucgss">GSS</option><option value="homologene">HomoloGene</option><option value="medgen">MedGen</option><option value="mesh">MeSH</option><option value="ncbisearch">NCBI Web Site</option><option value="nlmcatalog">NLM Catalog</option><option value="nuccore">Nucleotide</option><option value="omim">OMIM</option><option value="pmc">PMC</option><option value="popset">PopSet</option><option value="probe">Probe</option><option value="protein">Protein</option><option value="proteinclusters">Protein Clusters</option><option value="pcassay">PubChem BioAssay</option><option value="pccompound">PubChem Compound</option><option value="pcsubstance">PubChem Substance</option><option value="pubmed">PubMed</option><option value="pubmedhealth">PubMed Health</option><option value="snp">SNP</option><option value="sra">SRA</option><option value="structure">Structure</option><option value="taxonomy">Taxonomy</option><option value="toolkit">ToolKit</option><option value="toolkitall">ToolKitAll</option><option value="toolkitbook">ToolKitBook</option><option value="unigene">UniGene</option></optgroup>
+                </select>
+                <label class="offscreen_noflow left" for="search">Search NCBI</label>
+                <div class="searchbar_wrap">
+                    <input id="search" type="search" name="term" placeholder="Search NCBI" class="search-box" autocapitalize="off" autocorrect="off" autocomplete="off">
+                    <a id="clear" href="https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml#" style="display:none">
+                        <img src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/clear.png" alt="Clear input" width="14" height="14">
+                    </a>
+                </div>
+                <button name="Search"><img class="icon-small" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/search-white.svg" aria-hidden="true" alt="">
+                    <span class="icon-fallback-text">Search Icon</span>&nbsp; Search</button>
+            </form>
+        </div>
+        </div>
+        <div class="feedback">
+            <a href="https://www.ncbi.nlm.nih.gov/sites/ehelp/feedback?Ncbi_App=guide4beta" class="uppercase sticky-feedback" id="page_header_9">feedback</a>
+        </div>
+        <div id="sticky-feedback-form" style="display:none;">
+            <form name="feedback-form" method="post" action="https://www.ncbi.nlm.nih.gov/home/develop/https-guidance.shtml#">
+                <h1 id="feedback-header" class="margin-0">Feedback</h1>
+                <div class="feedback-field">
+    <p>NCBI is introducing some new and experimental content and we need your help prioritizing features and identifying problems. So send us feedback – lots of it.
+    We will not be able to reply to any comments you submit with this form. If you would like a reply, please <a href="https://www.ncbi.nlm.nih.gov/sites/ehelp?Ncbi_App=guide4beta" id="sticky-feedback-form_1">write to the Help Desk</a>.</p>
+                    <table class="feedback-field">
+                        <tbody><tr>
+                            <td><label for="FeedbackPage">Page</label></td>
+                            <td>
+                                <select name="FeedbackPage" id="FeedbackPage">
+                                    <option></option>
+                                    <option>Literature</option>
+                                    <option>Health</option>
+                                    <option>Genomes</option>
+                                    <option>Genes</option>
+                                    <option>Proteins</option>
+                                    <option>Chemicals</option>
+                                    <option>Submit</option>
+                                    <option>Download</option>
+                                    <option>Learn</option>
+                                    <option>Develop</option>
+                                    <option>Analyze</option>
+                                    <option>Research</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><td><label for="FeedbackType">Type of feedback</label></td>
+                            <td>
+                                <select name="FeedbackType" id="FeedbackType">
+                                    <option></option>
+                                    <option>Praise</option>
+                                    <option>Problem</option>
+                                    <option>Suggestion</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody></table>
+                    <label for="feedback-comment" class="offscreen_noflow">Feedback</label>
+                    <textarea type="text" placeholder="Comment or suggestion" name="feedbackComment" id="feedback-comment"></textarea>
+
+                    <button type="button" id="feedback-submit" name="feedbackSubmit" class="jig-ncbibutton ui-ncbibutton-blue ui-state-default ui-corner-all ui-button-text-only ui-ncbibutton ui-ncbibutton-gray" role="button"><span class="ui-button-text">Submit</span></button>
+                </div>
+                <button type="button" id="feedback-close" name="feedbackClose" class="jig-ncbibutton ui-ncbibutton-blue ui-state-default ui-corner-all ui-button-text-only ui-ncbibutton ui-ncbibutton-gray" style="display:none;" role="button"><span class="ui-button-text">Close</span></button>
+            </form>
+        </div>
+
+    </header>
+
+
+    <div id="maincontent" class="action_page">
+
+        <h1 class="gray-border large_h1">HTTPS at NCBI: Guidance for users of NCBI Web APIs</h1>
+
+        <iframe class="right" title="HTTPS - Changes to NCBI Web Protocols" width="560" height="315" style="margin-left: 1em" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/Cl1ftn2Cuco.html" frameborder="0" allowfullscreen=""></iframe>
+
+        <div class="wiki-content">
+    <h2 id="Whatishappening?">What is happening?</h2>
+    <p>To improve security and privacy, and <a href="https://www.whitehouse.gov/blog/2015/06/08/https-everywhere-government" class="external-link" rel="nofollow" id="maincontent_1">by Federal government mandate</a>, NCBI moved its Web sites to <a href="https://https.cio.gov/" class="external-link" rel="nofollow" id="maincontent_2">HTTPS only</a> by September 30, 2016.</p>
+    <p>To give software vendors time to respond, that deadline was extended for users of NCBI Web APIs to <strong>November 9, 2016</strong>.</p>
+    <p><strong>If you use NCBI only through a Web browser</strong> (like Safari, Firefox, Chrome, Internet Explorer, Opera, etc.), <strong>this document is not of interest to you.</strong> The only change you should notice after the deadline is that a green lock icon should appear inside the box, and the web addresses of the NCBI pages you visit will start with <code>https://</code>.</p>
+    <p>
+        <strong>If you maintain software that uses NCBI APIs or accesses NCBI servers through the Web, you should understand and act before the deadline to ensure uninterrupted service.</strong>
+    </p>
+    <p>NCBI Web services include APIs such as <a href="https://www.ncbi.nlm.nih.gov/books/NBK25501/" class="external-link" rel="nofollow" id="maincontent_3">NCBI eutilities</a> and <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&amp;PAGE_TYPE=BlastDocs&amp;DOC_TYPE=DeveloperInfo" class="external-link" rel="nofollow" id="maincontent_4">BLAST URLAPI</a> that client applications use to access NCBI data. A number of them (though not a comprehensive set) are listed on or linked from our <a href="https://www.ncbi.nlm.nih.gov/home/api.shtml" class="external-link" rel="nofollow" id="maincontent_5">APIs page</a>.</p>
+    <p>Applications that access NCBI web servers using <code>http://</code> URLs, instead of <code>https://</code> URLs, may fail partially or completely after NCBI switches to HTTPS-only.</p>
+    <p>This document explains our transition plan, and provides guidance to developers about how to update their applications (scripts, server-side applications like CGIs, browser plugins, etc.), before the switchover, to prevent failure.</p>
+    <h2 id="NCBIismovingallwebservicestoHTTPS">NCBI is moving all web services to HTTPS</h2>
+    <p>
+        <span>The HTTP protocol does not provide encryption, so anyone who can see web traffic between a client (for example, a web browser) and a server can intercept potentially sensitive information, and/or inject malware into users' browsers or operating systems. HTTPS solves this problem. It works just like HTTP, except that traffic is encrypted in both directions, so observers between the client and the server can't intercept or tamper with the requests or responses. It also provides authentication, ensuring that the client is communicating with the intended server given by the hostname, and not some impostor. </span>
+    </p>
+    <p>
+      The Federal Office of Management and Budget requires all Federal Web sites to switch to HTTPS-only (meaning, HTTP will be disabled) by December 31, 2016. However, NCBI, being a part of the National Library of Medicine, had an earlier deadline of September 30, 2016.
+    </p>
+    <p>
+      All public-facing web pages at NCBI now operate exclusively over https. To give software vendors and their customers more time to update their software, NCBI extended the deadline for
+      web service https compliance to November 9, 2016.
+    </p>
+    <h2 id="Updateyourapplicationsassoonaspossible">Update your applications as soon as possible
+    </h2>
+    <p>NCBI Web resources are all available now on HTTPS, so you can update your software immediately. </p>
+    <p>
+        <span>To ensure that your applications work before and after the switchover, update them so that URLs for all requests to NCBI servers start with <code>https:</code> instead of <code>http:</code>. For example, if your application searches PubMed using <a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi" class="external-link" rel="nofollow" id="maincontent_6"><strong>http:</strong>//eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi</a>, update it to use <a href="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi" class="external-link" rel="nofollow" id="maincontent_7"><strong>https:</strong>//eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi</a> instead. Please report any problems you encounter to <a href="mailto:info@ncbi.nlm.nih.gov" rel="nofollow" id="maincontent_8">info@ncbi.nlm.nih.gov</a>.</span>
+    </p>
+    <p>
+        <span>Many script authors access NCBI services using third-party libraries like biojava, bioperl, biopython, bioruby, etc.  In these cases, you may be able to update your application by simply updating the library you use to the most recent version. The table below provides information on versions of libraries we know about that already use HTTPS to interact with NCBI servers.</span>
+    </p>
+    <div class="table-wrap">
+        <div class="ui-ncbigrid-outer-div"><div class="ui-ncbigrid-inner-div"><table class="jig-ncbigrid ui-ncbigrid" id="ui-ncbigrid-1" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th data-column="d">
+                        <div>Library</div>
+                    </th>
+                    <th data-column="1">
+                        <div>Uses HTTPS for NCBI services?</div>
+                    </th>
+                    <th data-column="2">
+                        <div>Compliant Version</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BioJava</td>
+                    <td>Yes</td>
+                    <td>
+                        <p><a href="https://github.com/biojava/biojava-legacy" class="external-link" rel="nofollow" id="ui-ncbigrid-1_1">biojava-legacy</a> 1.9.3<br><a href="https://github.com/biojava/biojava" class="external-link" rel="nofollow" id="ui-ncbigrid-1_2">biojava</a> 4.2.4</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BioPerl</td>
+                    <td>Yes</td>
+                    <td><a href="https://metacpan.org/release/BioPerl" id="ui-ncbigrid-1_3">BioPerl 1.7</a> (<a href="https://github.com/bioperl/bioperl-live/pull/185" class="external-link" rel="nofollow" id="ui-ncbigrid-1_4">pull request)</a></td>
+                </tr>
+                <tr>
+                    <td>Biopython</td>
+                    <td>Yes</td>
+                    <td><a href="http://biopython.org/wiki/Download" class="external-link" rel="nofollow" id="ui-ncbigrid-1_5">Biopython 1.67</a> (<a href="https://raw.githubusercontent.com/biopython/biopython/master/NEWS" class="external-link" rel="nofollow" id="ui-ncbigrid-1_6">release notes</a>)</td>
+                </tr>
+                <tr>
+                    <td>BioRuby</td>
+                    <td>Yes</td>
+                    <td>
+                      <a href="http://bioruby.org/archive/bioruby-1.5.1.tar.gz" class="external-link" rel="nofollow" id="ui-ncbigrid-1_7">BioRuby 1.5.1</a>
+                      (<a href="https://github.com/bioruby/bioruby/issues/110" class="external-link" rel="nofollow" id="ui-ncbigrid-1_8">github issue</a>,)
+                      (<a href="http://bioruby.org/rdoc/RELEASE_NOTES_rdoc.html" class="external-link" rel="nofollow" id="ui-ncbigrid-1_9">release notes</a>)
+                    </td>
+                </tr>
+                <tr class="">
+                    <td>biogo</td>
+                    <td>Yes</td>
+                    <td>
+                        <a href="https://github.com/biogo/ncbi" class="external-link" rel="nofollow" id="ui-ncbigrid-1_10">most recent HEAD revision of master branch</a>
+                        (<a href="https://github.com/biogo/ncbi/issues/3" class="external-link" rel="nofollow" id="ui-ncbigrid-1_11">github issue</a>)
+                    </td>
+                </tr>
+                <tr class="">
+                  <td>reutils (R)</td>
+                  <td>Yes</td>
+                  <td>0.2.3, see <a href="https://github.com/gschofl/reutils" id="ui-ncbigrid-1_12">https://github.com/gschofl/reutils</a>
+                  (<a href="https://github.com/gschofl/reutils/issues/7" id="ui-ncbigrid-1_13">github issue</a>)</td>
+                </tr>
+            </tbody>
+        </table></div></div>
+    </div>
+    <p>
+        <span>Once you have updated and tested your application, it will continue to work as before, and no other action is required. This is the best option for scripts, CGIs, and other Web client software for which you have the source code and the ability to update it and deploy a new release before the deadline.</span>
+    </p>
+
+    <h2>After November 9, 2016, NCBI HTTP servers will redirect or reject all HTTP requests.</h2>
+    <p>All interactive web traffic to NCBI servers has been successfully moved to HTTPS. After the switchover date, November 9, 2016, requests to web services such as eutilities and BLAST URLAPI will also begin redirecting http requests to https.
+</p>
+    <p>
+        <span>If you do not update your application before the switchover date, these redirects from NCBI HTTP servers <em>may</em> buy you time to make the updates later.</span>
+    </p>
+    <p>After November 9, 2016, all traffic from NCBI HTTP servers, including Web services, will:</p>
+    <ol>
+        <li>respond with a server-side redirect (<code>HTTP 301 Moved permanently</code>) to the corresponding URL on HTTPS, <em>only</em> for <code>HTTP GET</code> and <code>HEAD</code> requests;
+        </li><li>respond with <code>HTTP 403 Forbidden </code>and an error message, to all requests other than <code>GET</code> and <code>HEAD</code> (including and especially <code>HTTP POST</code>);        
+        </li><li>include in every HTTPS response an <a href="https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet" class="external-link" rel="nofollow" id="maincontent_9">HTTP Strict Transport Security</a> (HSTS) header, which instructs browsers to automatically communicate thereafter only with HTTPS on that domain. (HSTS applies only to browsers, though other Web clients like scripts are free to implement it.) The HSTS header has a 1-year expiration date.
+        
+        </li><li>include in every HTTPS response the header <code>Content-Security-Policy: upgrade-insecure-requests</code>, which causes most browsers to automatically upgrade
+          <code>http://</code> links to <code>https://</code>, automatically avoiding most mixed content problems.
+    </li></ol>
+    <p>
+      After switchover, the HTTP redirects will remain in place for an as-yet undetermined period, but at least until the Federal deadline of December 31, 2016.
+    </p>
+
+    <h2>After switchover, applications that access NCBI APIs using HTTP may fail</h2>
+    <p>After the switchover date, applications that still try to access NCBI via HTTP (i.e., on port 80) may fail for a few possible reasons:</p>
+    <ol>
+        <li><em>Your programming environment's HTTP facility does not automatically follow redirects from HTTP to HTTPS.</em> Some libraries follow redirections from HTTP to HTTPS; others do not. Java's <code>URLConnection</code>, for example, <a href="http://docs.oracle.com/javase/6/docs/technotes/guides/deployment/deployment-guide/upgrade-guide/article-17.html" class="external-link" rel="nofollow" id="maincontent_10">does not automatically follow HTTP-to-HTTPS redirects by design</a>, even for safe methods like <code>GET</code> and <code>HEAD</code>.
+        </li><li><em>Your application uses HTTP verbs other than GET and HEAD. </em>All other HTTP requests (including especially <code>POST</code> and <code>PUT</code> requests) to HTTP URLs at NCBI will fail unconditionally (with <code>HTTP 403 Forbidden)</code> after the switchover date.
+        </li><li><em>Your application access NCBI resources through a proxy.</em> Some organizations use proxy servers to access the NCBI web site. These proxy servers must communicate with NCBI using https, which means they need valid certificates. If your application access NCBI through a proxy, check with the proxy vendor about https support and how to add or update certificates.
+        </li><li>
+            <em>Your programming environment does not support HTTPS.</em>
+        
+    </li></ol>
+    <p>In any of these cases, if the application does not work with https, the only solution is to update your all NCBI URLs to use HTTPS exclusively.</p>
+
+<h2 id="exeptions">Some requests will be temporarily exempt from redirection</h2>
+<p>
+For various technical reasons, certain requests will be temporarily exempt from redirection.
+Once the underlying technical issue is resolved, the exemption will be lifted, and redirection will
+begin without further public warning.
+</p>
+<p>
+The following http requests will be temporarily exempt from redirection:
+</p>
+<ul>
+<li>Requests from user agents matching the regular expression
+<code>(?i).*(?:genome-workbench|gbench|sra.*toolkit|vdb|ncbi-ngs|hisat2|extyles|omnimark).*$</code>
+</li><li>Requests with request-uri matching the regular expression <code>\.(xsd|xml|dtd)$</code>
+</li><li>Requests to the hosts <code>dtd.nlm.nih.gov</code> and <code>jats.nlm.nih.gov</code>
+</li></ul>
+
+    <h2 id="redirects">Redirects will be maintained indefinitely</h2>
+    
+    <p>All public NCBI servers are already enabled for HTTPS, so you can update your application to use HTTPS now, and test it on our live servers. Once you have updated to HTTPS, no further action is required. Please send questions or report problems to <a href="mailto:info@ncbi.nlm.nih.gov" class="external-link" rel="nofollow" id="maincontent_11">info@ncbi.nlm.nih.gov</a>.</p>
+
+    <p>In keeping with current US Federal Government policy, NCBI
+    intends to maintain these redirects on public servers
+    indefinitely. Nevertheless, it is to your advantage to update you
+    applications to use https only as soon as possible, both for
+    performance and security reasons.</p>
+
+    <h2 id="more">For more information</h2>
+    <p>For more on the US Federal government HTTPS-only initiative, see <a href="https://https.cio.gov/" class="external-link" rel="nofollow" id="maincontent_12">https://https.cio.gov</a>.</p>
+    <p>For questions, comments, or problems, contact the NCBI service desk at <a href="mailto:info@ncbi.nlm.nih.gov" class="external-link" rel="nofollow" id="maincontent_13">info@ncbi.nlm.nih.gov</a>.</p>
+    <p> </p>
+    <p> </p>
+</div>
+
+    </div>
+
+    
+
+    <footer id="page_footer" data-section="footer">
+        <div class="foot_wrap">
+<!-- top section of footer w link lists -->
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">NCBI</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/about/" id="page_footer_1">About NCBI</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/submit.shtml" id="page_footer_2">Submit</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/download.shtml" id="page_footer_3">Download</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/learn.shtml" id="page_footer_4">Learn</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/develop.shtml" id="page_footer_5">Develop</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/home/analyze.shtml" id="page_footer_6">Analyze</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/research/" id="page_footer_7">Research</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/news/" id="page_footer_8">NCBI News</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/guide/sitemap/" id="page_footer_9">Resource List (A-Z)</a></li>
+            </ul>
+
+            </div>
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">Literature</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/" id="page_footer_10">PubMed</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/" id="page_footer_11">PMC</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/books/" id="page_footer_12">Books</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/nlmcatalog/" id="page_footer_13">NLM Catalog</a></li>
+            </ul>
+
+            <h3 role="heading" aria-level="3">Health</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pubmedhealth/" id="page_footer_14">PubMed Health</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/medgen/" id="page_footer_15">MedGen</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/gtr/" id="page_footer_16">GTR</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/clinvar/" id="page_footer_17">ClinVar</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/gap/" id="page_footer_18">dbGap</a></li>
+            </ul>
+            </div>
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">Genomes</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/genome" id="page_footer_19">Genome</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/nucleotide" id="page_footer_20">Nucleotide</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/sra" id="page_footer_21">SRA</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/assembly" id="page_footer_22">Assembly</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/snp" id="page_footer_23">dbSNP</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/dbvar" id="page_footer_24">dbVar</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/geo/" id="page_footer_25">GEO</a></li>
+            </ul>
+            </div>
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">Genes</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/gene/" id="page_footer_26">Gene</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/nucleotide/" id="page_footer_27">Nucleotide</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/genbank/" id="page_footer_28">GenBank</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/refseq/" id="page_footer_29">RefSeq</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/genbank/tpa" id="page_footer_30">TPA</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/geo/" id="page_footer_31">GEO</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/unigene" id="page_footer_32">UniGene</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/homologene" id="page_footer_33">HomoloGene</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/biosystems" id="page_footer_34">BioSystems</a></li>
+            </ul>
+            </div>
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">Proteins</h3>
+            <ul>
+                <li><a href="https://www.ncbi.nlm.nih.gov/protein/" id="page_footer_35">Protein</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/refseq/" id="page_footer_36">RefSeq</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/genbank/tpa" id="page_footer_37">TPA</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/homologene" id="page_footer_38">HomoloGene</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/cdd" id="page_footer_39">CDD</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/proteinclusters" id="page_footer_40">Protein Clusters</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/structure" id="page_footer_41">Structure</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pcassay" id="page_footer_42">PubChem BioAssay</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/biosystems" id="page_footer_43">BioSystems</a></li>
+            </ul>
+            </div>
+
+            <div class="col two_col">
+            <h3 role="heading" aria-level="3">Chemicals</h3>
+            <ul>
+                <li><a href="https://pubchem.ncbi.nlm.nih.gov/" id="page_footer_44">PubChem</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pcassay" id="page_footer_45">BioAssay</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pcsubstance" id="page_footer_46">Substance</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pccompound" id="page_footer_47">Compound</a></li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/biosystems" id="page_footer_48">BioSystems</a></li>
+            </ul>
+            </div>
+
+<!-- social media -->
+            <div class="col two_col social">
+            <h3 role="heading" aria-level="3">Social</h3>
+            <ul class="social_media">
+				<li><a href="https://www.facebook.com/ncbi.nlm" role="button" aria-expanded="false" aria-haspopup="true" target="_blank" id="page_footer_49"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/facebook.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">Facebook</span></a></li>
+				<li><a href="https://www.twitter.com/ncbi" role="button" aria-expanded="false" aria-haspopup="true" target="_blank" id="page_footer_50"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/twitter.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">Twitter</span></a></li>
+				<li><a href="https://plus.google.com/s/ncbi" role="button" aria-expanded="false" aria-haspopup="true" target="_blank" id="page_footer_51"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/google-plus.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">Google+</span></a></li>
+				<li><a href="https://www.linkedin.com/company/national-center-for-biotechnology-information-ncbi-" id="page_footer_52"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/linkedin.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">LinkedIn</span></a></li>
+				<li><a href="https://www.youtube.com/ncbinlm" role="button" aria-expanded="false" aria-haspopup="true" target="_blank" id="page_footer_53"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/youtube.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">YouTube</span></a></li>
+				<li><a href="https://github.com/ncbi" id="page_footer_54"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/github.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">GitHub</span></a></li>
+				<li><a href="https://www.ncbi.nlm.nih.gov/news/announcements-list/" id="page_footer_55"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/rss.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">RSS Updates</span></a></li>
+				<li><a href="https://www.ncbi.nlm.nih.gov/news/announcements-list/" id="page_footer_56"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/email.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">Email Updates</span></a></li>
+				<li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/" id="page_footer_57"><img class="icon-medium gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/blog.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">NCBI Blog</span></a></li>
+            </ul>
+            </div>
+            <a class="help_desk jig-ncbihelpwindow right" target="_blank" href="https://www.ncbi.nlm.nih.gov/sites/ehelp" id="ui-ncbihelpwindow-2">Write to the Help Desk</a>
+
+        </div>
+
+<!-- bottom section of footer -->
+        <div role="contentinfo">
+            <ul class="right inline_list logos">
+                <li><a href="https://www.nlm.nih.gov/" id="page_footer_58"><img class="gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/nlm-logo.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">National Library Of Medicine</span></a></li>
+                <li><a href="https://www.nih.gov/" id="page_footer_59"><img class="gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/nih-logo.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">National Institutes Of Health</span></a></li>
+                <li><a href="https://www.hhs.gov/" id="page_footer_60"><img class="gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/hhs-logo.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">U.S. Department of Health &amp; Human Services</span></a></li>
+                <li><a href="https://www.usa.gov/" id="page_footer_61"><img class="icon-large-wide gray-medium" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/usagov-logo.svg" aria-hidden="true" alt=""><span class="icon-fallback-text">USA.gov</span></a></li>
+            </ul>
+
+            <div class="footer_padding">
+
+            <div class="footer_border h-card">
+
+                <a href="https://www.ncbi.nlm.nih.gov/" class="u-url" id="page_footer_62"><h3 role="heading" aria-level="3" class="ncbi_blue p-org">NCBI</h3></a>
+
+                <address>
+
+                <a href="https://www.ncbi.nlm.nih.gov/" class="u-url p-org" id="page_footer_63">National Center for Biotechnology Information,</a><a href="https://www.nlm.nih.gov/" id="page_footer_64"> U.S. National Library of Medicine</a>
+
+                <span class="h-adr">
+                <span class="p-street-address">8600 Rockville Pike</span>,
+                <span class="p-locality">Bethesda</span>
+                <span class="p-region"> MD</span>,
+                <span class="p-postal-code">20894</span>
+                <span class="p-country-name">USA</span>
+                </span>
+
+                </address>
+
+            </div>
+
+            <div class="inline_list about_list">
+                <a href="https://www.ncbi.nlm.nih.gov/home/about/policies.shtml" id="page_footer_65">Polices and Guidelines</a>
+                |
+                <a href="https://www.ncbi.nlm.nih.gov/home/about/contact.shtml" id="page_footer_66">Contact</a>
+            </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/hp.js"> </script>
+    <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/header.js"> </script>
+    <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/check_youtube.js"> </script>
+    <script type="text/javascript" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/InstrumentPageStarterJS.js"> </script>
+
+
+<div style="display: none; top: -100px; left: -100px;" aria-live="assertive" aria-hidden="true" class="ui-helper-reset ui-ncbipopper-wrapper ui-ncbipopper-basic">External link. Please review our <a href="https://www.nlm.nih.gov/privacy.html" id="ui-ncbiexternallink-4_1">privacy policy</a>.</div></div><script async="1" src="./Guidance for users of NCBI Web APIs - Develop - NCBI_files/analytics.js"></script>
+
+
+<ul class="print-log"><li></li></ul></body></html>
