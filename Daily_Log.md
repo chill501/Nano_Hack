@@ -91,6 +91,11 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
   You can look at these alignments with a software package called **Tablet**
 
+Important **Output files** form bwa:
+	
+	reads_aln.sorted.bam
+	
+	reads_aln.sorted.bam.bai
  
   
 ## 29th
@@ -99,7 +104,7 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
 Files to use:
 
-	all_reads.fasta
+	reads_aln.sorted.bam
 	
 	all_ref_join.fasta
 
