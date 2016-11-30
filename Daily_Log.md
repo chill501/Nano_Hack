@@ -110,7 +110,7 @@ Files to use:
 
 
 - [x] add GFP into all_ref.fasta
-- [ ] Ask Sam about Tablet
+- [x] Ask Sam about Tablet
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present
 - [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
 
@@ -119,7 +119,7 @@ Files to use:
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] Decide on live demo 
-- [ ] research TN7 (hayley)
+- [ ] research TN7 
 - [ ] find mutations in tablet 
 - [ ] search for the reads that align with the begining of PU18 backbone but code for an inserted gene
 - [ ] then blast the inserted gene and aligned reads against it
