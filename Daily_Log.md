@@ -89,7 +89,7 @@ For long read **alignment** you need another software tool. Use bwa like this:
     
     samtools index reads_aln.sorted.bam
 
-  You can look at these alignments with a software package called **Tablet
+  You can look at these alignments with a software package called **Tablet**
 
  
   
