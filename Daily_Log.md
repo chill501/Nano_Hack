@@ -108,19 +108,36 @@ Files to use:
 	
 	all_ref_join.fasta
 
+### Hind III
 
+Detla 76 inserted plasmid - it has 2 Hind III restriction sites - other plasmids has one site
+
+### Tn7
+
+Reads hit this section of the decoy plasmid - this is common in plasmids. 
+
+- [ ] research role of TN7 
+
+
+### GacS
+
+Numerous versions of this - WILD TYPE, H294R mutation and detal76 insertion.
+
+- [ ] Talk about GacS mutation and how half the population may have it
+
+
+### General Tasks
 - [x] add GFP into all_ref.fasta
 - [x] Ask Sam about Tablet
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present
 - [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
 
-
-### General Tasks
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] Decide on live demo 
-- [ ] research TN7 
+- [ ] isolate names from bam file - samtools - that covers certian area
+
 - [ ] find mutations in tablet 
 - [ ] search for the reads that align with the begining of PU18 backbone but code for an inserted gene
 - [ ] then blast the inserted gene and aligned reads against it
-- [ ] Talk about GacS mutation and how half the population may have it
+
