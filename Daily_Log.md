@@ -1,6 +1,6 @@
 # Nano_Hack
 
-## 27th 
+## 27th Nov
 
 ###Ideas
 Combine two fasta files
@@ -13,7 +13,7 @@ Blast against just plasmids
 
 ncbiwww module in Pyhton
 
-## 28th
+## 28th Nov
 
 Use fast5 files 
 Poretool to process fast5 files
@@ -98,7 +98,7 @@ Important **Output files** form bwa:
 	reads_aln.sorted.bam.bai
  
   
-## 29th
+## 29th Nov
 
 ### Tablet
 
@@ -108,6 +108,14 @@ Files to use:
 	
 	all_ref_join.fasta
 
+## 30th Nov 
+
+	gi|21190.... = GFP gene seq
+	ENA|AF246... = Gacs gene seq
+	gi|437877... = pME6010 plasmid seq
+	gi|209211... = pUC18 plasmid seq
+	gi|130693... = Decoy plasmid seq
+	
 ### Hind III
 
 Detla 76 inserted plasmid - it has 2 Hind III restriction sites - other plasmids has one site
@@ -116,14 +124,23 @@ Detla 76 inserted plasmid - it has 2 Hind III restriction sites - other plasmids
 
 Reads hit this section of the decoy plasmid - this is common in plasmids. 
 
-- [ ] research role of TN7 
-
-
 ### GacS
 
 Numerous versions of this - WILD TYPE, H294R mutation and detal76 insertion.
 
-- [ ] Talk about GacS mutation and how half the population may have it
+
+
+
+# 1st Dec
+- [ ] isolate names from bam file - samtools - that covers certian area
+- [ ] research role of TN7
+- [ ] read file sent by Sam on Wednesday - talks about Gacs http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
+- [ ] find mutations in pUC18 alignment in Tablet - H294R / Delta 76
+- [ ] search for the reads that align with the begining of PU18 backbone but code for an inserted gene (Alex)
+- [ ] then blast the inserted gene and aligned reads against it
+- [ ] identify reads which align with GFP
+- [ ] use Samtools to see which reads present at certian sequences - this way we can categorise reads into plasmid type
+- [ ] Screenshots of Tablet at important stages for presentation
 
 
 ### General Tasks
@@ -131,13 +148,11 @@ Numerous versions of this - WILD TYPE, H294R mutation and detal76 insertion.
 - [x] Ask Sam about Tablet
 - [ ] What info can we extract from Blast - eg. shows us what plasmids are present
 - [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
-
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] Decide on live demo 
-- [ ] isolate names from bam file - samtools - that covers certian area
 
-- [ ] find mutations in tablet 
-- [ ] search for the reads that align with the begining of PU18 backbone but code for an inserted gene
-- [ ] then blast the inserted gene and aligned reads against it
+
+
+
 
