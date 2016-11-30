@@ -67,7 +67,7 @@ Library to use:
 
 	all_ref.fasta
 
-- [ ] What info can we extract from Blast - eg. shows us what plasmids are present 
+ 
 
 ### BWA
 
@@ -87,7 +87,7 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
     samtools sort reads_aln.bam -o reads_aln.sorted.bam
     
-    samrools index reads_aln.sorted.bam
+    samtools index reads_aln.sorted.bam
 
   You can look at these alignments with a software package called **Tablet.
 
@@ -104,9 +104,9 @@ Files to use:
 	all_ref_join.fasta
 
 
-- [ ] add GFP into all_ref.fasta
+- [x] add GFP into all_ref.fasta
 - [ ] Ask Sam about Tablet
-
+- [ ] What info can we extract from Blast - eg. shows us what plasmids are present
 
 
 ### General Tasks
