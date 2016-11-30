@@ -104,7 +104,7 @@ Important **Output files** form bwa:
 
 Files to use:
 
-	reads_aln.sorted.bam
+	reads_aln.sorted.bam.bai
 	
 	all_ref_join.fasta
 
