@@ -4,7 +4,7 @@ Nanopore outputs files in **Fast5** format. This must first be converted to **fa
 
 ### Fast5 --> Fasta 
 
-    poretools fasta BC04 > BC04.fasta
+	poretools fasta BC04 > BC04.fasta
 
 ### Fasta --> Extracting 2D reads
 
@@ -24,10 +24,10 @@ See file **code.py**
 
 ### Combine all reads into single file
 
-    cat *.fasta > all.fasta
+	cat *.fasta > all.fasta
 
 ### NCBI Blast
-![NCBI Logo](/Documents/NANO_HACK/Blast.png)
+![NCBI Logo](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
 Permissions on BLAST Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
