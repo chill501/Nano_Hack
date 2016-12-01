@@ -58,7 +58,7 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
     git clone https://github.com/lh3/bwa.git
 
-    cp {all_ref.fasta, 2dolder_reads.fasta, all_ref.fasta} bwa
+ 
     
     cd bwa
 
@@ -66,27 +66,22 @@ For long read **alignment** you need another software tool. Use bwa like this:
 
     bwa index all_ref.fasta
 
-    bwa mem -x ont2d all_ref.fasta all_reads.fasta > reads_aln.sam
+    bwa mem -x ont2d all_ref.fasta 2dolder_reads.fasta > bigreads_aln.sam
 
-    samtools view -bS reads_aln.sam > reads_aln.bam
+    samtools view -bS bigreads_aln.sam > bigreads_aln.bam
 
-    samtools sort reads_aln.bam -o reads_aln.sorted.bam
+    samtools sort bigreads_aln.bam -o bigreads_aln.sorted.bam
     
-    samtools index reads_aln.sorted.bam
+    samtools index bigreads_aln.sorted.bam
 
   You can look at these alignments with a software package called **Tablet**
 
 Important **Output files** form bwa:
 	
-	reads_aln.sorted.bam
+	bigreads_aln.sorted.bam
 	
-	reads_aln.sorted.bam.bai
+	bigreads_aln.sorted.bam.bai
 
-This process was repeated on a larger dataset - 3.6K reads (rather than 250 reads before).
-
-	bigreads_aln.bam
-	
-	bigreads_aln.bam.bai
 	
 ### Tablet
 
