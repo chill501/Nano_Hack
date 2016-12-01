@@ -123,6 +123,10 @@ This identifies the presence of the pME3258 genome with a Gacs insert.
 
 ### EMBOSS Backtranseq
 
+![EMBOSSS](https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png)
+
+https://www.ebi.ac.uk/Tools/st/emboss_backtranseq/
+
 We know the amino acid sequence of the Δ76 Gacs mutated pUC18 plasmid.
 We identified the amino acids surrounding the deletion site.
 
@@ -140,9 +144,6 @@ This information was obtained from the following academic paper:
 
 This **amino acid sequence** was converted back into a **DNA sequence** using EMBOSS Backtranseq
 
-![EMBOSSS](https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png)
-
-https://www.ebi.ac.uk/Tools/st/emboss_backtranseq/
 
 The results were saved in **bases_around_deletion_Gacs.fasta**:
 
