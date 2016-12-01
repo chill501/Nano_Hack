@@ -84,7 +84,8 @@ Files related to plasmids and genes like so:
 	gi|130693... = Decoy plasmid seq
 
 ### EMBOSS Backtranseq
-![EMBOSSS] (file:///Users/clairehill/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)	
+
+![EMBOSSS](file:///Users/clairehill/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)	
 
 
 
