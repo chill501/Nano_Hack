@@ -80,12 +80,17 @@ Important **Output files** form bwa:
 	
 	reads_aln.sorted.bam.bai
 
+This process was repeated on a larger dataset - 3.6K reads (rather than 250 reads before).
 
+	bigreads_aln.bam
+	
+	bigreads_aln.bam.bai
+	
 ### Tablet
 
 Files to use:
 
-	reads_aln.sorted.bam.bai
+	bigreads_aln.sorted.bam.bai
 	
 	all_ref_join.fasta
 
