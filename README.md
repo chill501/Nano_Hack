@@ -108,10 +108,10 @@ Files related to plasmids and genes like so:
 For **example Tablet outputs** see files:
 
 	GFP.png
-	Gacs.png
-	6010.png
+	GacS.png
+	pME6010.png
 	pUC18.png
-	Decoy.png
+	DECOY.png
 	
 ------------------------------------------------------------------------------------------------------------------
 
