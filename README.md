@@ -28,6 +28,7 @@ See file **code.py**
 
 ### NCBI Blast
 ![NCBI Logo](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
+
 Permissions on BLAST Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
