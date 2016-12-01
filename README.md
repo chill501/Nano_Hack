@@ -65,9 +65,7 @@ Important **Output files** form bwa:
 	reads_aln.sorted.bam
 	
 	reads_aln.sorted.bam.bai
- 
-  
-## 29th Nov
+
 
 ### Tablet
 
@@ -77,14 +75,20 @@ Files to use:
 	
 	all_ref_join.fasta
 
-## 30th Nov 
+Files related to plasmids and genes like so:
 
 	gi|21190.... = GFP gene seq
 	ENA|AF246... = Gacs gene seq
 	gi|437877... = pME6010 plasmid seq
 	gi|209211... = pUC18 plasmid seq
 	gi|130693... = Decoy plasmid seq
-	
+
+### EMBOSS Backtranseq
+![EMBOSSS] (file:///Users/clairehill/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)	
+
+
+
+
 ### Hind III
 
 Detla 76 inserted plasmid - it has 2 Hind III restriction sites - other plasmids has one site
