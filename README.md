@@ -135,12 +135,12 @@ We identified the amino acids surrounding the deletion site.
 	
 This information was obtained from the following academic paper:
 
-	GacS Sensor Domains Pertinent to the Regulation of Exoproduct Formation and 
-	to the Biocontrol Potential of Pseudomonas fluorescens CHA0
+> GacS Sensor Domains Pertinent to the Regulation of Exoproduct Formation and 
+> to the Biocontrol Potential of Pseudomonas fluorescens CHA0
 	
-	ZubeR et al., 2002
+> ZubeR et al., 2002
 
-	Available at: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
+> Available at: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
 
 This **amino acid sequence** was converted back into a **DNA sequence** using EMBOSS Backtranseq
 
