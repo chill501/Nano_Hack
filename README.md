@@ -46,6 +46,10 @@ Code was written to linearise the refernces so that searches could me made witho
 
 See file **______________.py**
 
+This produced the file:
+	
+	linar_all_ref.fasta
+
 ### BWA
 
 For long read **alignment** you need another software tool. Use bwa like this:
