@@ -136,24 +136,20 @@ See file **insert.fasta**
 
 	Pseudomonas protegens CHA0, complete genome	2645	2645	87%	0.0	82%	
 	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645	2645	87%	0.0	82%	
-- [ ] align reads against it?
+
 
 # 1st Dec
 - [ ] isolate names from bam file - samtools - that covers certian area
-- [ ] research role of TN7
-- [ ] read file sent by Sam on Wednesday - talks about Gacs http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
+- [x] research role of TN7
+- [x] read file sent by Sam on Wednesday - talks about Gacs http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
 - [ ] find mutations in Gacs alignment in Tablet - H294R / Delta 76 
-
-- [ ] identify reads which align with GFP
 - [ ] use Samtools to see which reads present at certian sequences - this way we can categorise reads into plasmid type
-- [ ] Screenshots of Tablet at important stages for presentation
+- [x] Screenshots of Tablet at important stages for presentation
 
 
 ### General Tasks
 - [x] add GFP into all_ref.fasta
 - [x] Ask Sam about Tablet
-- [ ] What info can we extract from Blast - eg. shows us what plasmids are present
-- [ ] rather than waiting until end - untils - analyse as you go - run until you get answer you want
 - [x] read the fast5 format document sent by Sam (Claire and Hayley)
 - [x] work out Biopython and how to link to NCBI Blast (Alex and Emma)
 - [ ] Decide on live demo 
