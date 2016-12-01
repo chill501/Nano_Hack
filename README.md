@@ -126,7 +126,7 @@ Searching for the reads that align with the plasmid backbone but code for an **i
 - Use the python code **________.py** to search reads with this sequence and report the sequence of bases beside.
 - **Blast** these sequences to see what they encode for.
 
-**e.g. Blast results:
+**e.g. Blast results:**
 
 	Pseudomonas protegens CHA0, complete genome 2645    2645    87% 0.0 82% 
 	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645   2645    87% 0.0 82% 
