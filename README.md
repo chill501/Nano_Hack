@@ -140,7 +140,7 @@ This information was obtained from the following academic paper:
 	
 	ZubeR et al., 2002
 
-*Available at*: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
+	Available at: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
 
 This **amino acid sequence** was converted back into a **DNA sequence** using EMBOSS Backtranseq
 
@@ -152,7 +152,7 @@ The results were saved in **bases_around_deletion_Gacs.fasta**:
 
 This sequence was used to identify reads which related to the Δ76 Gacs mutated pUC18 plasmid.
 
-*In the future, similar processes will be used to identify the H294R mutation and wild type reads and therefore, classify reads to each plasmid.
+*In the future, similar processes will be used to identify the H294R mutation and wild type reads and therefore, classify reads to each plasmid.*
 
 
 
