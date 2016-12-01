@@ -24,7 +24,7 @@ See file **code.py**
 
 ### Combine all reads into single file
 
-	cat *.fasta > all.fasta
+	cat *.fasta > all_reads.fasta
 
 ### NCBI Blast
 ![NCBI Logo](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
