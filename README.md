@@ -61,7 +61,10 @@ For long read **alignment** you need another software tool. Use bwa like this:
  Copy **input files** into bwa folder:
  
  > 2dolder_read.fasta
+ 
  > all_ref.fasta
+ 
+ > all_ref_join.fasta
     
     cd bwa
 
