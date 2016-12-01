@@ -27,7 +27,9 @@ See file **code.py**
 ### Combine all reads into single file
 
 	cat *.fasta > all_reads.fasta
+	
 ------------------------------------------------------------------------------------------------------------------
+
 ### ANALYSIS AND ALIGNMENT 
 
 ### NCBI Blast
@@ -95,7 +97,7 @@ Files related to plasmids and genes like so:
 	gi|209211... = pUC18 plasmid seq
 	gi|130693... = Decoy plasmid seq
 	
-For example outputs from tablet see:
+For **example Tablet outputs** see files:
 
 	GFP.png
 	Gacs.png
@@ -104,6 +106,7 @@ For example outputs from tablet see:
 	Decoy.png
 	
 ------------------------------------------------------------------------------------------------------------------
+
 ### EVALUATION 
 
 ### Gacs and GFP inserts
@@ -123,7 +126,7 @@ Searching for the reads that align with the plasmid backbone but code for an **i
 - Use the python code **________.py** to search reads with this sequence and report the sequence of bases beside.
 - **Blast** these sequences to see what they encode for.
 
-e.g. Blast results:
+**e.g. Blast results:
 
 	Pseudomonas protegens CHA0, complete genome 2645    2645    87% 0.0 82% 
 	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645   2645    87% 0.0 82% 
@@ -164,13 +167,3 @@ The results were saved in **bases_around_deletion_Gacs.fasta**:
 This sequence was used to identify reads which related to the Δ76 Gacs mutated pUC18 plasmid.
 
 *In the future, similar processes will be used to identify the H294R mutation and wild type reads and therefore, classify reads to each plasmid.*
-
-
-
-
-
-
-
-
-
-
