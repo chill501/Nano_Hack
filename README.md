@@ -46,7 +46,7 @@ Library to use:
 
 Code was written to linearise the refernces so that searches could me made without missing hits which **span across lines**
 
-See file **______________.py**
+See file **linearize_plasmid.py**
 
 This produced the file:
 	
@@ -131,7 +131,7 @@ Searching for the reads that align with the plasmid backbone but code for an **i
 
 - Identify reads which abruptly start in the plasmid backbone.
 - Take the sequence at the beginning of these reads
-- Use the python code **________.py** to search reads with this sequence and report the sequence of bases beside.
+- Use the python code **find_gacs_in_pME6010.py** to search reads with this sequence and report the sequence of bases beside.
 - **Blast** these sequences to see what they encode for.
 
 **e.g. Blast results:**
@@ -139,9 +139,10 @@ Searching for the reads that align with the plasmid backbone but code for an **i
 	Pseudomonas protegens CHA0, complete genome                          2645    2645   87%    0.0    82% 
 	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645   2645    87%    0.0    82% 
 	
-This identifies the presence of the pME3258 genome with a Gacs insert.
+This identifies the presence of the pME6010 genome with a Gacs insert - 5 reads came up.
 
-*This was repeated to identify reads which span the GFP insert and the pME6010 plasmid backbone and pUC18 plasmids with a Gacs insert*
+**find_gacs_in_pME6010.py** can be easily modiifed to search for seq present in reads which cover both plasmid and insert.
+
 
 ### EMBOSS Backtranseq
 
