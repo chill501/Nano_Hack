@@ -29,6 +29,8 @@ See file **code.py**
 ### NCBI Blast
 ![NCBI Logo](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
 
+https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch
+
 Permissions on BLAST Recently changed - therefore Biopython no longer able to link in to Blast
 So we will take a subset of plasmids and compare against them 
 
@@ -85,9 +87,9 @@ Files related to plasmids and genes like so:
 
 ### EMBOSS Backtranseq
 
-![EMBOSSS](file:///Users/clairehill/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)	
+![EMBOSSS](file:///Users/clairehill/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)
 
-
+https://www.ebi.ac.uk/Tools/st/emboss_backtranseq/
 
 
 ### Hind III
