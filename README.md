@@ -89,13 +89,21 @@ Files related to plasmids and genes like so:
 ### EMBOSS Backtranseq
 
 We know the amino acid sequence of the Δ76 Gacs mutated pUC18 plasmid.
-This information was btained from the following academic paper:
+We identified the amino acids surrounding the deletion site.
 
-	GacS Sensor Domains Pertinent to the Regulation of Exoproduct Formation and to the Biocontrol Potential of Pseudomonas fluorescens CHA0
+	…**AGTALLAVR**   MGRTINNPLTQIKQAVAQLKDGNLETRLPPLGSQELDELASGI
+	NRMASTLQNAQEELQHSIDQATEDVRQNLETIEIQNI  ELDLARKEAL…
+	
+This information was obtained from the following academic paper:
+
+	GacS Sensor Domains Pertinent to the Regulation of Exoproduct Formation and 
+	to the Biocontrol Potential of Pseudomonas fluorescens CHA0
 	
 	ZubeR et al., 2002
 
 *Available at*: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
+
+This **amino acid sequence** was converted back into a **DNA sequence** using EMBOSS Backtranseq
 
 ![EMBOSSS](https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png)
 
