@@ -1,5 +1,7 @@
 # Nano_Hack
 
+### DATA INPUT FILE FORMATTING
+
 Nanopore outputs files in **Fast5** format. This must first be converted to **fasta** format.
 
 ### Fast5 --> Fasta 
@@ -25,6 +27,7 @@ See file **code.py**
 ### Combine all reads into single file
 
 	cat *.fasta > all_reads.fasta
+------------------------------------------------------------------------------------------------------------------
 
 ### NCBI Blast
 ![NCBI Logo](https://blast.ncbi.nlm.nih.gov/images/nucleutide-blast-cover.png)
@@ -38,7 +41,9 @@ Library to use:
 
 	all_ref.fasta
 
- 
+Code was written to linearise the refernces so that searches could me made without missing hits which **span across lines**
+
+See file **______________.py**
 
 ### BWA
 
@@ -85,14 +90,30 @@ Files related to plasmids and genes like so:
 	gi|209211... = pUC18 plasmid seq
 	gi|130693... = Decoy plasmid seq
 
+### Gacs
 
-### EMBOSS Backtranseq
+Search for the reads that align with the beginning of PU18 backbone but code for an **inserted gene**.
+See file **insert.fasta**
+
+
+Blast results:
+
+	Pseudomonas protegens CHA0, complete genome 2645    2645    87% 0.0 82% 
+	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645   2645    87% 0.0 82% 
+
+See file **insert.fasta**
+	
+**Blast results:**
+
+	Pseudomonas protegens CHA0, complete genome	2645	2645	87%	0.0	82%	
+	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645	2645	87%	0.0	82%	
+# EMBOSS Backtranseq
 
 We know the amino acid sequence of the Δ76 Gacs mutated pUC18 plasmid.
 We identified the amino acids surrounding the deletion site.
 
-	…**AGTALLAVR**   MGRTINNPLTQIKQAVAQLKDGNLETRLPPLGSQELDELASGI
-	NRMASTLQNAQEELQHSIDQATEDVRQNLETIEIQNI  ELDLARKEAL…
+	…AGTALLAVRM   GRTINNPLTQIKQAVAQLKDGNLETRLPPLGSQELDELASGI
+	NRMASTLQNAQEELQHSIDQATEDVRQNLETIEIQNI   ELDLARKEAL…
 	
 This information was obtained from the following academic paper:
 
@@ -109,28 +130,17 @@ This **amino acid sequence** was converted back into a **DNA sequence** using EM
 
 https://www.ebi.ac.uk/Tools/st/emboss_backtranseq/
 
+The results were saved in **bases_around_deletion_Gacs.fasta**:
 
-### Hind III
+	>predicted sequence around the delta 76 delection site in Gacs
+	GCCGGCACCGCCCTGCTGGCCGTGCGCATGGAGCTGGACCTGGCCCGCAAGGAGGCCCTG
 
-Detla 76 inserted plasmid - it has 2 Hind III restriction sites - other plasmids has one site
+This sequence was used to identify reads which related to the Δ76 Gacs mutated pUC18 plasmid.
 
-### Tn7
+*In the future, similar processes will be used to identify the H294R mutation and wild type reads and therefore, classify reads to each plasmid.
 
-Reads hit this section of the decoy plasmid - this is common in plasmids. 
 
-### GacS
 
-Numerous versions of this - WILD TYPE, H294R mutation and detal76 insertion.
-
-- [x] search for the reads that align with the beginning of PU18 backbone but code for an inserted gene (Alex)
-
-See file **insert.fasta**
-	
-**Blast results:**
-
-	Pseudomonas protegens CHA0, complete genome	2645	2645	87%	0.0	82%	
-	Pseudomonas fluorescens sensor kinase GacS (gacS) gene, complete cds 2645	2645	87%	0.0	82%	
-- [ ] align reads against it?
 
 # 1st Dec
 - [ ] isolate names from bam file - samtools - that covers certian area
