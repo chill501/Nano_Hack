@@ -121,7 +121,7 @@ This identifies the presence of the pME3258 genome with a Gacs insert.
 
 *This was repeated to identify reads which span the GFP insert and the pME6010 plasmid backbone and pUC18 plasmids with a Gacs insert*
 
-# EMBOSS Backtranseq
+### EMBOSS Backtranseq
 
 We know the amino acid sequence of the Δ76 Gacs mutated pUC18 plasmid.
 We identified the amino acids surrounding the deletion site.
