@@ -95,6 +95,13 @@ Files related to plasmids and genes like so:
 	gi|209211... = pUC18 plasmid seq
 	gi|130693... = Decoy plasmid seq
 	
+For example outputs from tablet see:
+
+	GFP.png
+	Gacs.png
+	6010.png
+	pUC18.png
+	Decoy.png
 	
 ------------------------------------------------------------------------------------------------------------------
 ### EVALUATION 
