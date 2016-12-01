@@ -95,7 +95,7 @@ Files related to plasmids and genes like so:
 ------------------------------------------------------------------------------------------------------------------
 ### EVALUATION 
 
-### Gacs and GFP interts
+### Gacs and GFP inserts
 
 Three Gacs versions are present in the sample:
 	
