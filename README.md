@@ -87,7 +87,7 @@ Files related to plasmids and genes like so:
 
 ### EMBOSS Backtranseq
 
-![EMBOSSS](/Documents/Oxford/Bioinformatics/NANO_HACK/EMBOSS.png)
+![EMBOSSS](https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png)
 
 https://www.ebi.ac.uk/Tools/st/emboss_backtranseq/
 
