@@ -85,7 +85,17 @@ Files related to plasmids and genes like so:
 	gi|209211... = pUC18 plasmid seq
 	gi|130693... = Decoy plasmid seq
 
+
 ### EMBOSS Backtranseq
+
+We know the amino acid sequence of the Δ76 Gacs mutated pUC18 plasmid.
+This information was btained from the following academic paper:
+
+	GacS Sensor Domains Pertinent to the Regulation of Exoproduct Formation and to the Biocontrol Potential of Pseudomonas fluorescens CHA0
+	
+	ZubeR et al., 2002
+
+*Available at*: http://apsjournals.apsnet.org/doi/pdf/10.1094/MPMI.2003.16.7.634
 
 ![EMBOSSS](https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_black.png)
 
