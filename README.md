@@ -175,4 +175,7 @@ The results were saved in **bases_around_deletion_Gacs.fasta**:
 
 This sequence was used to identify reads which related to the Δ76 Gacs mutated pUC18 plasmid.
 
+We also developed a program to search for the specific delta 76 mutation in GacS
+**find_del_gacS.py**
+
 *In the future, similar processes will be used to identify the H294R mutation and wild type reads and therefore, classify reads to each plasmid.*
