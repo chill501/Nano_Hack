@@ -2,6 +2,51 @@
 
 ## Part of the Oxford DTP Hackathon for Bioinformatics.
 
+We are stranded on the moon...
+Someone has been compromised by a pathogenic moon bacterium 
+This bacterium carries a mutated plasmid now encoding a toxic protein 
+To make it home safely we need to identify…
+	Who has been infected?
+	
+
+#### Our Mission
+Analyse reads from multiple bacterial plasmids altogether 
+
+#### How it works
+We sequenced all the bacterial plasmid DNA extracted from our blood samples using Nanopore.
+No access to barcoding
+Unable to isolate each bacterial species 
+We need to identify which plasmids are present in each sample
+
+
+
+#### Where are we now
+
+These plasmids are present in our sample:
+pUC18 plasmid with wild type GacS
+pUC18 plasmid with Δ76 mutated GacS
+pUC18 plasmid with H294R mutated Gacs
+pME6010 plasmid with GacS
+pME6010 plasmid with GFP
+Identify and classify a number of reads from unique features:
+Identified three categories
+
+
+#### Where we want to go
+
+Further classify reads for each plasmid:
+Identifying specific mutations in read data
+Allowing accurate assembly and identification
+Utilise the entire NCBI Blast database:
+Not limited to our reference library of suspected plasmids
+
+
+
+ 
+	
+
+
+
 ### DATA INPUT FILE FORMATTING
 
 Nanopore outputs files in **Fast5** format. This must first be converted to **fasta** format.
