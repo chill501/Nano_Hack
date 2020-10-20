@@ -1,5 +1,7 @@
 # Nano_Hack
 
+## Part of the Oxford DTP Hackathon for Bioinformatics.
+
 ### DATA INPUT FILE FORMATTING
 
 Nanopore outputs files in **Fast5** format. This must first be converted to **fasta** format.
